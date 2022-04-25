@@ -1,0 +1,18 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Todays Deals</h1>
+  <!-- Sets the grid of 2 coloms and each row of 450px -->
+  <mat-grid-list cols="2" rowHeight="450px">
+    <!-- Creates a loop for each card we retrive from API and sets its size -->
+    <mat-grid-tile *ngFor="let card of cards" [colspan]="card.cols" [rowspan]="card.rows">
+      <!-- Sets the backgroud of the card to an image -->
+      <mat-card class="dashboard-card card-image" [style.background-image]="getImage(card.imageName)">
+        <mat-card-header>
+          <mat-card-title class="title">
+            <!-- Sets the title -->
+            {{card.title}}
+          </mat-card-title>
+        </mat-card-header>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

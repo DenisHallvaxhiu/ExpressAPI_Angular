@@ -1,0 +1,30 @@
+<div class="stepper">
+<mat-stepper *ngFor="let shippings of shipping" orientation="vertical">
+
+    <!-- Address part of stepper -->
+    <mat-step>
+      <ng-template matStepLabel>Address</ng-template>
+      <ng-template matStepContent>
+        {{shippings.location}}
+        <button mat-button matStepperNext>Next</button>
+      </ng-template>
+    </mat-step>
+
+    <!-- Shipped part of stepper -->
+    <mat-step>
+      <ng-template matStepLabel>Shipped</ng-template>
+      <ng-template matStepContent>
+        {{shippings.shipped}}
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </ng-template>
+    </mat-step>
+
+    <!-- Delivered part of stepper -->
+    <mat-step>
+      <ng-template matStepLabel>Delivered</ng-template>
+      {{shippings.delivered}}
+      <button mat-button matStepperPrevious>Back</button>
+    </mat-step>
+  </mat-stepper>
+</div>

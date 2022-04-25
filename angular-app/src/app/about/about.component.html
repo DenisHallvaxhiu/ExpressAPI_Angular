@@ -1,0 +1,9 @@
+<h1>Our Story</h1>
+<!-- Gets info from component.ts about the h3 (which is retrived from API) -->
+<div *ngFor="let abouts of about" class="h3">
+    <h3>{{about[0].h3}}</h3>
+</div>
+<!-- Creates a div big enough to store a image as background -->
+<div class="image" [style.background-image]="getImage(about[0].imageName)">
+    <br>
+</div>

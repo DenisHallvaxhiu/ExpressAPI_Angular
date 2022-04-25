@@ -1,0 +1,4 @@
+/* Giving more space between the steppers */
+.stepper{
+    margin: 50px 20px;
+}
